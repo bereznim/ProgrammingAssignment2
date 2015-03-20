@@ -3,17 +3,17 @@
 ##have already been evaulated so r will not need to recompute that value 
 
 ## the makeCachematrix is used to take in a square matrix and creates a list of 4 functions which do the following
-##set the values of matrix, set the values of a matrix, set the inverse and get the inverse  )
+##set the values of matrix, get the values of a matrix, set the inverse and get the inverse  )
 
 makeCacheMatrix <- function(x = matrix())
 {
   inv <- NULL               ## creates a variable inv and sets its initial value to null 
   
   set <- function(y)        ## this creates the function set() which is used to set variables 
-                            ##inside the makeMatrix function
+                            ##inside the makeCacheMatrix function
   {                         ## y is a numeric argument passed into makeCacheMatrix     
-    x <<- y                 ## set x for the function entirement equal to y 
-    inv <<- NULL            ## set inv for the function entirement equal to null      
+    x <<- y                 ## set x for the function enviroment equal to y 
+    inv <<- NULL            ## set inv for the function enviroment equal to null      
   }
   get <- function()         ## this creates the get() function within makeCacheMatrix and assigns a matrix to it
   {x}
